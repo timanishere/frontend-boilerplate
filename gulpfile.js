@@ -33,7 +33,7 @@ gulp.task('serve', ['sass'], function() {
 	gulp.watch('./app/scss/**/*.scss', ['sass']);
 	gulp.watch('./app/css/*.css');
 	gulp.watch('./app/scripts/**/*.js', ['scripts']);
-	gulp.watch('./app/html/**/**/*.html').on('change', browserSync.reload);
+	gulp.watch('./app/html/**/*.html').on('change', browserSync.reload);
 	gulp.watch('./app/*.html').on('change', browserSync.reload);
 });
 
@@ -65,12 +65,19 @@ gulp.task('fontawesome', function() {
 	.pipe(gulp.dest('./app/scss/vendor'));
 });
 
+
+
 gulp.task('fontawesomeTypo', function() {
 	return gulp.src('./app/bower_components/font-awesome/fonts/**')
 	//.pipe(concat({path: '_font-awesome.scss', stat: { mode: 0666}}))
 	.pipe(gulp.dest('./app/fonts'));
 });
 
+
+///////////////////////////////////////
+// FONT AWESOME BOWER CONCATENATE
+///////////////////////////////////////
+gulp.task('break')
 ///////////////////////////////////////
 // CSS MINIFY
 ///////////////////////////////////////
@@ -88,7 +95,7 @@ gulp.task('cssnano', function() {
 // IMAGE MINIFY
 ///////////////////////////////////////
 gulp.task('imagemin', function() {
-	return gulp.src('./app/images/*')
+	return gulp.src('./app/images/**/**')
 		.pipe(imagemin({
 			progressive:true,
 			svgoPlugins: [{removeViewBox: false}],
@@ -107,6 +114,7 @@ gulp.task('scripts', function() {
 	return gulp.src([ 
 		'./app/bower_components/angular/angular.min.js',
 		'./app/bower_components/angular-animate/angular-animate.min.js',
+		'./app/bower_components/angular-sanitize/angular-sanitize.min.js',
 		'./app/bower_components/jquery/dist/jquery.min.js',
 		'./app/scripts/src/**/**/**.js'
 		])
