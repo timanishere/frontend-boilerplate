@@ -25,7 +25,8 @@
     "gulp-sass": "^2.1.1",
     "gulp-uglify": "^1.5.1",
     "gulp-useref": "^3.0.4",
-    "jshint": "^2.9.1"
+    "jshint": "^2.9.1",
+    "ng-sanitize": "0.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
