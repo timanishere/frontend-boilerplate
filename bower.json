@@ -22,7 +22,8 @@
   },
   "devDependencies": {
     "angular-animate": "^1.4.8",
-    "angular-sanitize": "^1.4.8"
+    "angular-sanitize": "^1.4.8",
+    "breakpoint-sass": "^2.7.0"
   },
   "resolutions": {
     "angular": "~1.4.8"

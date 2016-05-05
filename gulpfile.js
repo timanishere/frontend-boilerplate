@@ -56,28 +56,8 @@ gulp.task('sass', function() {
 });
 
 
-///////////////////////////////////////
-// FONT AWESOME BOWER CONCATENATE
-///////////////////////////////////////
-gulp.task('fontawesome', function() {
-	return gulp.src('./app/bower_components/font-awesome/css/font-awesome.css')
-	.pipe(concat({path: '_font-awesome.scss', stat: { mode: 0666}}))
-	.pipe(gulp.dest('./app/scss/vendor'));
-});
 
 
-
-gulp.task('fontawesomeTypo', function() {
-	return gulp.src('./app/bower_components/font-awesome/fonts/**')
-	//.pipe(concat({path: '_font-awesome.scss', stat: { mode: 0666}}))
-	.pipe(gulp.dest('./app/fonts'));
-});
-
-
-///////////////////////////////////////
-// FONT AWESOME BOWER CONCATENATE
-///////////////////////////////////////
-gulp.task('break')
 ///////////////////////////////////////
 // CSS MINIFY
 ///////////////////////////////////////
@@ -223,5 +203,5 @@ gulp.task('dist', ['useref','sass', 'cssnano', 'fonts', 'scripts', 'uglify', 'im
 ///////////////////////////////////////
 // GULP DEFAULT
 ///////////////////////////////////////
-gulp.task('default', ['fontawesome','fontawesomeTypo', 'sass', 'scripts', 'jshint', 'serve', 'watch' ]);
+gulp.task('default', ['sass', 'scripts', 'jshint', 'serve', 'watch' ]);
 //gulp.task('default', ['fontawesomeTypo']);

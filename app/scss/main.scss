@@ -1,5 +1,5 @@
-
-@import 'vendor/font-awesome';
+@import 'app/bower_components/breakpoint-sass/stylesheets/_breakpoint.scss';
+@import 'app/bower_components/font-awesome/scss/font-awesome.scss';
 
 @import 'utils/variables';
 @import 'utils/helpers';
@@ -19,7 +19,6 @@
 @import 'layout/sidebar';
 @import 'layout/grid';
 
-@import 'components/popup';
 @import 'components/buttons';
 
 @import 'pages/home';
